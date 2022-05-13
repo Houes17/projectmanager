@@ -1,0 +1,25 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Company List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>id_company</th>
+            <th>company_name</th>
+            <th>Projets/th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let company of companies ">
+            <td>{{company.idCompany}}</td>
+            <td>{{company.companyName}}</td>
+           
+            
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

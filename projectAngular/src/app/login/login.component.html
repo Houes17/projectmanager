@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Espace Membre</h1>
+                    <h5>Connectez vous pour accéder à l'Espace Membre !</h5>
+
+                </div>
+                <form>
+                    <div class="mb-3">
+                      User Name : <input type="text" name="username" [(ngModel)]="username">
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                      Password : <input type="password" name="password" [(ngModel)]="password">
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button (click)=checkLogin() class="btn btn-success">
+                      Connexion
+                    </button>
+                  </form>
+                  <a routerLink = "/signup">Vous ne disposez pa encore de compte utilisateur? Inscrivez vous gratuitement </a>
+            </div>
+        </div>
+    </div>
+</div>

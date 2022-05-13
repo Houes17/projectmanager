@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a *ngIf="loginService.isUserLoggedIn()" routerLink="/Company" class="nav-link">Gestion des compagnies</a>
+      </li>
+      <li class="nav-item">
+        <a *ngIf="loginService.isUserLoggedIn()" routerLink="/task-list" class="nav-link">Gestion des taches</a>
+      </li>
+
+    <li class="nav-item">
+        <a *ngIf="loginService.isUserLoggedIn()" routerLink="/Project" class="nav-link">Gesion des projets</a>
+    </li>
+
+    <li class="nav-item">
+      <a *ngIf="loginService.isUserLoggedIn()" routerLink="/add-task" class="nav-link">Ajouter une tache</a>
+    </li>
+    <li class="nav-item">
+        <a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a>
+    </li>
+
+    <li class="nav-item">
+        <a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link">logout</a>
+    </li>
+
+
+    </ul>
+  </nav>
+  <div class="container">
+    <br>
+    <h2 style="text-align: center;">ProjectManager</h2>
+    <hr>  
+    <div class="card">
+      <div class="card-body">
+    <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="footer">
+    <div class="container">
+        <span>All Rights Reserved 2019 @JavaGuides</span>
+    </div>
+  </footer>
